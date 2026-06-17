@@ -6,21 +6,16 @@
 
 
 #program 2
-marks = int(input("Enter your marks: "))
-if marks >= 90:
-    print("Grade A-Excellent")
-elif marks >= 70:
-    print("Grade B-Good")
-elif marks >= 50:
-    print("Grade C-Pass")
-else:
-    print("Failed - Work harder")
-grade = calculate_grade(95)
-print(grade)
-grade2 = calculate_grade(45)
-print(grade2)
-grade3 = calculate_grade(75)
-print(grade3)
+# marks = int(input("Enter your marks: "))
+# if marks >= 90:
+#     print("Grade A-Excellent")
+# elif marks >= 70:
+#     print("Grade B-Good")
+# elif marks >= 50:
+#     print("Grade C-Pass")
+# else:
+#     print("Failed - Work harder")
+
 
 #program 3- Guessing game
 # import random
