@@ -12,9 +12,9 @@
 
 # Contact Book App
 
-contacts = []
+contacts = []#initialize an empty list to store contacts
 
-while True:
+while True:#infinite loop to keep the program running until the user chooses to exit
     print("\n1. Add Contact")
     print("2. Show All Contacts")
     print("3. Search Contact")
@@ -35,6 +35,7 @@ while True:
         print(f"{name} added!")
 
     elif choice == "2":
+        print(f"\nTotal Contacts: {len(contacts)}")
         if len(contacts) == 0:
             print("No contacts yet!")
         else:
@@ -47,8 +48,8 @@ while True:
 
     elif choice == "3":
         search = input("Enter name to search: ")
-        found = False
-        for contact in contacts:
+        found = False#it is used to track whether a contact with the given name was found in the contacts list. Initially, it is set to False, indicating that no contact has been found yet. If a contact with the matching name is found during the search, found is set to True. After the search loop, if found remains False, it means that no contact with the specified name was found, and a message is printed to inform the user. 
+        for contact in contacts:#it iterates through each contact in the contacts list to check if the name matches the search query. If a match is found, it prints the contact's details and sets found to True.
             if contact["name"] == search:
                 print(f"Name: {contact['name']}")
                 print(f"Phone: {contact['phone']}")
@@ -60,3 +61,5 @@ while True:
     elif choice == "4":
         print("Goodbye!")
         break
+
+    
