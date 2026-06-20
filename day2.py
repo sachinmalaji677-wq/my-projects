@@ -56,59 +56,59 @@
 
 # Student Grade Tracker
 
-def calculate_grade(marks):
-    if marks >= 90:
-        return "A Grade"
-    elif marks >= 70:
-        return "B Grade"
-    elif marks >= 50:
-        return "C Grade"
-    else:
-        return "Failed"
+# def calculate_grade(marks):
+#     if marks >= 90:
+#         return "A Grade"
+#     elif marks >= 70:
+#         return "B Grade"
+#     elif marks >= 50:
+#         return "C Grade"
+#     else:
+#         return "Failed"
 
-students = []
-marks_list = []
+# students = []
+# marks_list = []
 
-while True:
-    print("\n1. Add Student")
-    print("2. Show All Students")
-    print("3. Show Passed Students")
-    print("4. Show Highest Marks")
-    print("5. Exit")
+# while True:
+#     print("\n1. Add Student")
+#     print("2. Show All Students")
+#     print("3. Show Passed Students")
+#     print("4. Show Highest Marks")
+#     print("5. Exit")
 
-    choice = input("Enter choice: ")
+#     choice = input("Enter choice: ")
 
-    if choice == "1":
-        name = input("Enter student name: ")
-        marks = int(input("Enter marks: "))
-        students.append(name)
-        marks_list.append(marks)
-        print(f"{name} added!")
+#     if choice == "1":
+#         name = input("Enter student name: ")
+#         marks = int(input("Enter marks: "))
+#         students.append(name)
+#         marks_list.append(marks)
+#         print(f"{name} added!")
 
-    elif choice == "2":
-        if len(students) == 0:
-            print("No students yet!")
-        else:
-            for i in range(len(students)):
-                grade = calculate_grade(marks_list[i])
-                print(f"{students[i]} → {marks_list[i]} → {grade}")
+#     elif choice == "2":
+#         if len(students) == 0:
+#             print("No students yet!")
+#         else:
+#             for i in range(len(students)):
+#                 grade = calculate_grade(marks_list[i])
+#                 print(f"{students[i]} → {marks_list[i]} → {grade}")
 
-    elif choice == "3":
-        for i in range(len(students)):
-            if marks_list[i] >= 50:
-                print(f"{students[i]} passed!")
+#     elif choice == "3":
+#         for i in range(len(students)):
+#             if marks_list[i] >= 50:
+#                 print(f"{students[i]} passed!")
 
-    elif choice == "4":
-        if len(students) == 0:
-            print("No students yet!")
-        else:
-            highest = max(marks_list)
-            index = marks_list.index(highest)
-            print(f"Highest: {students[index]} with {highest} marks!")
+#     elif choice == "4":
+#         if len(students) == 0:
+#             print("No students yet!")
+#         else:
+#             highest = max(marks_list)
+#             index = marks_list.index(highest)
+#             print(f"Highest: {students[index]} with {highest} marks!")
 
-    elif choice == "5":
-        print("Goodbye!")
-        break
+#     elif choice == "5":
+#         print("Goodbye!")
+#         break
 
 
 

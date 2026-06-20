@@ -34,60 +34,60 @@
 
 
 # Contact Book with File Saving
-import json
+# import json
 
-def save_contacts(contacts):
-    with open("contacts.txt", "w") as file:
-        json.dump(contacts, file)
-    print("Contacts saved!")
+# def save_contacts(contacts):
+#     with open("contacts.txt", "w") as file:
+#         json.dump(contacts, file)
+#     print("Contacts saved!")
 
-def load_contacts():
-    try:
-        with open("contacts.txt", "r") as file:
-            return json.load(file)
-    except:
-        return []
+# def load_contacts():
+#     try:
+#         with open("contacts.txt", "r") as file:
+#             return json.load(file)
+#     except:
+#         return []
 
-contacts = load_contacts()
+# contacts = load_contacts()
 
-while True:
-    print("\n1. Add Contact")
-    print("2. Show All Contacts")
-    print("3. Search Contact")
-    print("4. Exit")
+# while True:
+#     print("\n1. Add Contact")
+#     print("2. Show All Contacts")
+#     print("3. Search Contact")
+#     print("4. Exit")
 
-    choice = input("Enter choice: ")
+#     choice = input("Enter choice: ")
 
-    if choice == "1":
-        name = input("Enter name: ")
-        phone = input("Enter phone: ")
-        contact = {
-            "name": name,
-            "phone": phone
-        }
-        contacts.append(contact)
-        save_contacts(contacts)
+#     if choice == "1":
+#         name = input("Enter name: ")
+#         phone = input("Enter phone: ")
+#         contact = {
+#             "name": name,
+#             "phone": phone
+#         }
+#         contacts.append(contact)
+#         save_contacts(contacts)
 
-    elif choice == "2":
-        if len(contacts) == 0:
-            print("No contacts yet!")
-        else:
-            for contact in contacts:
-                print(f"Name: {contact['name']}")
-                print(f"Phone: {contact['phone']}")
-                print("---")
+#     elif choice == "2":
+#         if len(contacts) == 0:
+#             print("No contacts yet!")
+#         else:
+#             for contact in contacts:
+#                 print(f"Name: {contact['name']}")
+#                 print(f"Phone: {contact['phone']}")
+#                 print("---")
 
-    elif choice == "3":
-        search = input("Enter name: ")
-        found = False
-        for contact in contacts:
-            if contact["name"] == search:
-                print(f"Name: {contact['name']}")
-                print(f"Phone: {contact['phone']}")
-                found = True
-        if not found:
-            print("Not found!")
+#     elif choice == "3":
+#         search = input("Enter name: ")
+#         found = False
+#         for contact in contacts:
+#             if contact["name"] == search:
+#                 print(f"Name: {contact['name']}")
+#                 print(f"Phone: {contact['phone']}")
+#                 found = True
+#         if not found:
+#             print("Not found!")
 
-    elif choice == "4":
-        print("Goodbye!")
-        break
+#     elif choice == "4":
+#         print("Goodbye!")
+#         break
