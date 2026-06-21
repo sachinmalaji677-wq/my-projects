@@ -1,3 +1,10 @@
+#How to push github
+# git add .
+# git commit -m "Day 3 - Dictionaries and Contact Book"
+# git push
+#______________________________________________________________________________________________
+
+
 # name = input("Enter your name: ")
 # age = input("Enter your age:")
 # print("Hello",name)
