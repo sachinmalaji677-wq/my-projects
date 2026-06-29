@@ -14,11 +14,16 @@
 # def student(id: int):
 #     return {"student_id": id}
 
-from fastapi import FastAPI
 
+
+from fastapi import FastAPI
 app = FastAPI()
 
-
-@app.get("/")
+@app.get("/login")
 async def root():
-    return {"message": "Hello World"}
+    return {"message": "Hello sachin"}
+
+
+@app.get("/posts")
+async def get_posts():
+    return {"message": "Here are your posts"}
