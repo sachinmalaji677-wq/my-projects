@@ -1,4 +1,4 @@
-#Personal CLI Assistant
+# Personal CLI Assistant
 # Day 7 - Personal CLI Assistant
 # import requests
 # import json
