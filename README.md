@@ -16,15 +16,14 @@ A RESTful API built with **FastAPI** that allows users to create, manage, and de
 
 ### 🔗 Live Demo
 
-- API: https://task-manager-api-yndu.onrender.com
-- Swagger Docs: https://task-manager-api-yndu.onrender.com/docs
+- API Docs: https://task-manager-api-yndu.onrender.com/docs
 
 ### ⚙️ Tech Stack
 
 - Python
 - FastAPI
 - SQLAlchemy
-- SQLite
+- PostgreSQL
 - REST APIs
 - Render
 
