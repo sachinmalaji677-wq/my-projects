@@ -142,7 +142,16 @@ from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 from auth import hash_password, verify_password, create_token, verify_token
 
-DATABASE_URL = "postgresql://postgres:sde2@localhost:5432/taskdb"
+DATABASE_URL = "postgresql://taskdb_prod_zlf0_user:x8WU8uUemrN29OGEwjFKjeEzMSTGtRAm@dpg-d9dnecf41pts73dgtk9g-a/taskdb_prod_zlf0"
+
+import os
+
+DATABASE_URL = os.environ.get(
+    "DATABASE_URL",
+    "postgresql://postgres:sde2@localhost:5432/taskdb"
+)
+if DATABASE_URL.startswith("postgres://"):
+    DATABASE_URL = DATABASE_URL.replace("postgres://", "postgresql://", 1)
 
 engine = create_engine(DATABASE_URL)
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)

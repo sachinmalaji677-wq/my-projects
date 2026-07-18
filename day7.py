@@ -88,3 +88,6 @@
 #         break
 #     else:
 #         print("Invalid choice!")
+
+
+postgresql://postgres:sde2@localhost:5432/taskdb
